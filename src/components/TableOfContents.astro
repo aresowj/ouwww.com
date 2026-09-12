@@ -1,0 +1,10 @@
+---
+const { items } = Astro.props;
+---
+
+<nav class="toc" aria-label="Table of contents">
+  <strong>On this page</strong>
+  <ol>
+    {items.map((item) => <li class={`toc-${item.level}`}><a href={`#${item.id}`}>{item.text}</a></li>)}
+  </ol>
+</nav>
