@@ -62,5 +62,9 @@ if (!home.includes('https://ouwww.com') || !article.includes('rel="canonical"') 
   console.error('SEO metadata missing');
   process.exit(1);
 }
+if (!article.includes('https://www.googletagmanager.com/gtag/js?id=G-2DKJ0LTKTJ') || !article.includes('gtag(\"set\", \"linker\", {\"domains\": [\"aresou.net\"]})') || !article.includes('gtag(\"set\", \"developer_id.dZTNiMT\", true)') || !article.includes('gtag(\"config\", \"G-2DKJ0LTKTJ\")')) {
+  console.error('Google Analytics metadata missing');
+  process.exit(1);
+}
 
 console.log(`Verified ${urls.length} legacy post routes, ${taxonomyUrls.length} taxonomy routes, feeds, sitemap artifacts, 404, and SEO metadata.`);
