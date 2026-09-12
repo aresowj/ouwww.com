@@ -1,0 +1,1 @@
+import fs from 'node:fs'; import { XMLParser } from 'fast-xml-parser'; const urls=new XMLParser().parse(fs.readFileSync('post-sitemap.xml','utf8')).urlset.url.map(x=>x.loc).filter(x=>x!=='/'); const missing=urls.filter(x=>!fs.existsSync(`dist${x}index.html`)); if(missing.length){console.error(missing);process.exit(1)} console.log(`Verified ${urls.length} legacy post routes.`);

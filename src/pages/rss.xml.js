@@ -1,0 +1,2 @@
+import rss from '@astrojs/rss'; import { getCollection } from 'astro:content';
+export async function GET(context){const posts=(await getCollection('blog')).sort((a,b)=>b.data.date-a.data.date); return rss({title:"weijie ou's scratch pad",description:'writing and tech sharing from a backend engineer',site:context.site,items:posts.map(({data})=>({title:data.title,pubDate:data.date,link:`/${data.year}/${data.month}/${data.day}/${data.routeSlug}/`,description:data.categories.join(', ')}))});}
