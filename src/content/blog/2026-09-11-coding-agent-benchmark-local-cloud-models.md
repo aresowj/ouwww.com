@@ -184,6 +184,51 @@ spec-draft-p-min = 0.8</code></pre>
 
 <p>I am also keeping the RTX 4080 setup. A 27B IQ3 model that can run at up to 80 tokens per second and still go 6/6 on this benchmark is too useful to throw away simply because cloud models complete complex agent loops faster.</p>
 
+<h2>What does local actually cost?</h2>
+
+<p>The API bill is only one side of the comparison. To estimate the local cost, I used a deliberately simple assumption: the complete computer draws an average of 600 W while the model is actively running, it runs for eight hours every day, and electricity costs $0.15 per kWh. That works out to:</p>
+
+<pre><code>0.6 kW × 8 hours × $0.15 = $0.72 per day
+$0.72 × 30 days = $21.60 per month
+$0.72 × 365 days = $262.80 per year</code></pre>
+
+<p>This is an estimate, not a wall-meter measurement. The GPU may be busy while the rest of the machine is not, and idle time, cooling, monitor power, and other household electricity are not included. It is also worth separating the marginal cost of using hardware I already own from the cost of buying that hardware.</p>
+
+<table>
+<thead><tr><th>Scenario</th><th>Up-front hardware</th><th>Electricity / year</th><th>Three-year monthly cost</th><th>Three-year total</th></tr></thead>
+<tbody>
+<tr><td>Already own the machine</td><td>$0 incremental</td><td>$262.80</td><td>$21.60</td><td>$788.40</td></tr>
+<tr><td>Buy used system</td><td>Assume $1,200</td><td>$262.80</td><td>$55.00</td><td>$1,988.40</td></tr>
+<tr><td>Buy new system</td><td>Assume $2,000</td><td>$262.80</td><td>$77.16</td><td>$2,774.40</td></tr>
+</tbody>
+</table>
+
+<p>The used and new rows are planning assumptions for a complete RTX 4080-class system, not quotes. They amortize the purchase over 36 months and add the electricity cost. If the machine is also used for gaming or ordinary work, only part of that purchase price should really be assigned to the model.</p>
+
+<h3>Comparison with inexpensive APIs</h3>
+
+<p>For a rough throughput comparison, 80 output tokens per second for eight hours is about 2.30 million output tokens per day. Using current standard output prices, that much output would cost approximately:</p>
+
+<table>
+<thead><tr><th>Service</th><th>Published output price</th><th>8-hour output equivalent</th><th>30-day equivalent</th></tr></thead>
+<tbody>
+<tr><td>Local Qwen on the 4080</td><td>Electricity at $0.15/kWh</td><td>$0.72</td><td>$21.60</td></tr>
+<tr><td>Gemini 2.5 Flash-Lite</td><td>$0.40 / 1M output tokens</td><td>~$0.92</td><td>~$27.65</td></tr>
+<tr><td>DeepSeek V4.1 Flash, off-peak</td><td>$0.60 / 1M output tokens</td><td>~$1.38</td><td>~$41.47</td></tr>
+<tr><td>GPT-5 Mini</td><td>$2.00 / 1M output tokens</td><td>~$4.61</td><td>~$138.24</td></tr>
+</tbody>
+</table>
+
+<p>The API figures exclude input tokens, cached-input charges, and any provider-specific tool fees. DeepSeek’s peak output price is currently $1.20 per million tokens, which would make the same output about $2.76 per day. The price references are <a href="https://ai.google.dev/gemini-api/docs/pricing">Google’s Gemini pricing</a>, <a href="https://api-docs.deepseek.com/quick_start/pricing/">DeepSeek’s pricing page</a>, and <a href="https://developers.openai.com/api/docs/models/gpt-5-mini">OpenAI’s GPT-5 Mini model page</a>; they can change, so this section should be treated as a dated snapshot.</p>
+
+<p>There is an important catch: equal tokens are not equal work. In my benchmark, the local model needed about 45.4K output tokens for six completed tasks, while Luna needed about 14.0K. A cheaper API can still win economically if it reaches a correct result with far fewer tokens and less waiting. Conversely, the already-owned local machine has a very low marginal cost and offers privacy, offline operation, and unlimited parallel use within its hardware limits. My current conclusion is therefore conditional:</p>
+
+<ul>
+<li>If I already own the machine, local inference costs roughly $22 per month at this usage level and is easy to justify.</li>
+<li>If I must buy a $1,200 used system, a low-cost API can be cheaper until the machine is used heavily or its non-AI value is included.</li>
+<li>A new $2,000 system is difficult to justify on electricity savings alone; I would buy it for local control, privacy, availability, or other workloads.</li>
+</ul>
+
 <h2>What I want to test next</h2>
 
 <p>The current benchmark is clearly too easy. The next version should include:</p>
