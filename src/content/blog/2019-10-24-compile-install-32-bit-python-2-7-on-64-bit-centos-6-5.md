@@ -1,5 +1,6 @@
 ---
-title: "Compile &#038; install 32 bit Python 2.7 on 64 bit CentOS 6.5"
+title: "Compile & install 32 bit Python 2.7 on 64 bit CentOS 6.5"
+description: "You might want to compile a version of Python other than shipped one on your CentOS system. For example, running a Python script using a [...]\nThe post Compile & install 32 bit Python 2.7 on 64 bit CentOS 6.5 appeared first on weijie ou's scratch pad.\n"
 date: 2019-10-25T06:00:00.000Z
 year: "2019"
 month: "10"

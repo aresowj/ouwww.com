@@ -1,5 +1,6 @@
 ---
 title: "JavaScript (jQuery AngularJS) Notes"
+description: "Better way to compare two floats When you compare two floats, you’d better not directly compare them. Because in the calculation handled by computer, some [...]\nThe post JavaScript (jQuery AngularJS) Notes appeared first on weijie ou's scratch pad.\n"
 date: 2019-10-25T05:54:00.000Z
 year: "2019"
 month: "10"

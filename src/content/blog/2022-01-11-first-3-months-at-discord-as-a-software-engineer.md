@@ -1,5 +1,6 @@
 ---
 title: "First 3 months at Discord as a Software Engineer"
+description: "Intro Last year (2021), I decided to move on from Microsoft, where I worked in the past 4 years. Microsoft is absolutely one of the [...]\nThe post First 3 months at Discord as a Software Engineer appeared first on weijie ou's scratch pad.\n"
 date: 2022-01-12T00:49:08.000Z
 year: "2022"
 month: "01"

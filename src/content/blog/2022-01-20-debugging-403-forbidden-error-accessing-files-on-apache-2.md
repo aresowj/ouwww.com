@@ -1,5 +1,6 @@
 ---
-title: "Debugging &#8220;403 Forbidden&#8221; Error Accessing Files on Apache 2"
+title: "Debugging “403 Forbidden” Error Accessing Files on Apache 2"
+description: "Recently I was trying to play around with some WordPress plugins, that brought my attention to the console and discovered there have been JavaScript errors [...]\nThe post Debugging “403 Forbidden” Error Accessing Files on Apache 2 appeared first on weijie ou's scratch pad.\n"
 date: 2022-01-21T05:19:06.000Z
 year: "2022"
 month: "01"

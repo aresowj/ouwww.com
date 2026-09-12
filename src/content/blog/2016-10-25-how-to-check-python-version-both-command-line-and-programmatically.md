@@ -1,5 +1,6 @@
 ---
 title: "How to check Python version (both command-line and programmatically)"
+description: "Sometimes you might want to confirm if your program will run / is running under Python 2.x or 3.x. We have a very simple way [...]\nThe post How to check Python version (both command-line and programmatically) appeared first on weijie ou's scratch pad.\n"
 date: 2016-10-25T05:39:00.000Z
 year: "2016"
 month: "10"

@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content'; import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content'; import Base from '../layouts/Base.astro'; import { formatPostDate } from '../lib/dates.js';
 const posts = (await getCollection('blog')).sort((a,b)=>b.data.date.valueOf()-a.data.date.valueOf());
 ---
-<Base><h1>Writing and tech sharing</h1><p class="meta">Notes on software, systems, career, and life.</p><section class="post-list">{posts.map(({data})=><article class="card"><div class="meta">{data.date.toLocaleDateString('en-US',{dateStyle:'long'})}</div><h2><a href={`/${data.year}/${data.month}/${data.day}/${data.routeSlug}/`}>{data.title}</a></h2><p>{data.categories.join(' · ')}</p></article>)}</section></Base>
+<Base><h1>Writing and tech sharing</h1><p class="meta">Notes on software, systems, career, and life.</p><section class="post-list">{posts.map(({data})=><article class="card"><div class="meta">{formatPostDate(data)}</div><h2><a href={`/${data.year}/${data.month}/${data.day}/${data.routeSlug}/`}>{data.title}</a></h2><p>{data.categories.join(' · ')}</p></article>)}</section></Base>

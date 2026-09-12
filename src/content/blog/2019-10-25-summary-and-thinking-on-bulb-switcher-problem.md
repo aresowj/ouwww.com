@@ -1,5 +1,6 @@
 ---
 title: "Summary and thinking on Bulb Switcher problem"
+description: "Bulb Switcher Problem: There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. [...]\nThe post Summary and thinking on Bulb Switcher problem appeared first on weijie ou's scratch pad.\n"
 date: 2019-10-25T09:30:00.000Z
 year: "2019"
 month: "10"
