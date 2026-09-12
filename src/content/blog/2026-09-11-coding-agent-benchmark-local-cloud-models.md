@@ -7,6 +7,8 @@ month: "09"
 day: "11"
 routeSlug: "coding-agent-benchmark-local-cloud-models"
 categories: ["Tech", "ai", "coding agents", "llama.cpp", "local llm", "benchmarking"]
+cover: "/images/covers/llama-coding-agent.png"
+coverAlt: "A thoughtful llama working at a laptop beside a desktop GPU"
 ---
 
 <p>I have been experimenting with replacing part of my local coding-agent setup with cloud models, so I built a reproducible benchmark and ran the same six autonomous coding tasks across several models.</p>
