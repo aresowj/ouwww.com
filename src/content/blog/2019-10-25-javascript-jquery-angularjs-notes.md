@@ -7,6 +7,8 @@ month: "10"
 day: "25"
 routeSlug: "javascript-jquery-angularjs-notes"
 categories: ["Tech","javascript"]
+cover: "/images/covers/javascript-notes.png"
+coverAlt: "JavaScript notes"
 ---
 <h4 class="wp-block-heading">Better way to compare two floats</h4>
 

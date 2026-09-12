@@ -7,6 +7,8 @@ month: "01"
 day: "11"
 routeSlug: "first-3-months-at-discord-as-a-software-engineer"
 categories: ["Life","career","discord","software engineering"]
+cover: "/images/covers/discord-logo.png"
+coverAlt: "Discord logo"
 ---
 <div class="wp-block-image is-style-default"><figure class="aligncenter size-full is-resized"><img decoding="async" src="/wp-content/uploads/2022/01/Discord-LogoWordmark-Color.png" alt="" class="wp-image-116" width="285" height="78" srcset="/wp-content/uploads/2022/01/Discord-LogoWordmark-Color.png 876w, /wp-content/uploads/2022/01/Discord-LogoWordmark-Color-300x82.png 300w, /wp-content/uploads/2022/01/Discord-LogoWordmark-Color-768x210.png 768w" sizes="(max-width: 285px) 100vw, 285px" /></figure></div>
 

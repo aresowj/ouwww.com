@@ -7,6 +7,8 @@ month: "01"
 day: "20"
 routeSlug: "debugging-403-forbidden-error-accessing-files-on-apache-2"
 categories: ["Tech","apache","devops","hosting","javascript","web"]
+cover: "/images/covers/apache-403-screenshot.jpg"
+coverAlt: "Apache configuration screenshot"
 ---
 <p>Recently I was trying to play around with some WordPress plugins, that brought my attention to the console and discovered there have been JavaScript errors for my site:</p>
 

@@ -3,4 +3,4 @@ import { getCollection } from 'astro:content'; import Base from '../layouts/Base
 export async function getStaticPaths(){const posts=await getCollection('blog'); return posts.map(({data,body})=>({params:{slug:`${data.year}/${data.month}/${data.day}/${data.routeSlug}`},props:{data,body}}));}
 const {data,body}=Astro.props;
 ---
-<Base title={data.title} description={data.description}><article><div class="meta">{formatPostDate(data)} · {data.categories.join(', ')}</div><h1>{data.title}</h1><div set:html={highlightArticle(body)} /></article></Base>
+<Base title={data.title} description={data.description} image={data.cover} imageAlt={data.coverAlt}><article><div class="meta">{formatPostDate(data)} · {data.categories.join(', ')}</div><h1>{data.title}</h1><div set:html={highlightArticle(body)} /></article></Base>

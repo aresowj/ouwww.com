@@ -7,7 +7,10 @@ const postPath = `/${data.year}/${data.month}/${data.day}/${data.routeSlug}/`;
 ---
 
 <article class="card">
-  <div class="meta">{formatPostDate(data)}</div>
-  <h2><a href={postPath}>{data.title}</a></h2>
-  {showCategories ? <p>{data.categories.join(' · ')}</p> : null}
+  {data.cover ? <a class="card-cover" href={postPath}><img src={data.cover} alt={data.coverAlt ?? `Cover image for ${data.title}`} loading="lazy" /></a> : null}
+  <div class="card-body">
+    <div class="meta">{formatPostDate(data)}</div>
+    <h2><a href={postPath}>{data.title}</a></h2>
+    {showCategories ? <p>{data.categories.join(' · ')}</p> : null}
+  </div>
 </article>

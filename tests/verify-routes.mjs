@@ -18,6 +18,7 @@ const required = [
   'dist/category-sitemap.xml',
   'dist/post_tag-sitemap.xml',
   'dist/privacy-policy/index.html',
+  'dist/_redirects',
 ];
 const missingRequired = required.filter((file) => !fs.existsSync(file));
 const wrangler = fs.readFileSync('wrangler.toml', 'utf8');
@@ -58,12 +59,25 @@ if (missingSitemapLocs.length) {
 
 const home = fs.readFileSync('dist/index.html', 'utf8');
 const article = fs.readFileSync(`dist${urls[0]}index.html`, 'utf8');
+const coverArticle = fs.readFileSync(`dist${urls[1]}index.html`, 'utf8');
 if (!home.includes('https://ouwww.com') || !article.includes('rel="canonical"') || !article.includes('property="og:title"')) {
   console.error('SEO metadata missing');
   process.exit(1);
 }
 if (!article.includes('https://www.googletagmanager.com/gtag/js?id=G-2DKJ0LTKTJ') || !article.includes('gtag(\"set\", \"linker\", {\"domains\": [\"aresou.net\"]})') || !article.includes('gtag(\"set\", \"developer_id.dZTNiMT\", true)') || !article.includes('gtag(\"config\", \"G-2DKJ0LTKTJ\")')) {
   console.error('Google Analytics metadata missing');
+  process.exit(1);
+}
+const coverUrls = [
+  '/images/covers/compile-install-python-centos.jpg',
+  '/images/covers/javascript-notes.png',
+  '/images/covers/how-to-draw-an-owl.jpg',
+  '/images/covers/discord-logo.png',
+  '/images/covers/apache-403-screenshot.jpg',
+];
+const redirects = fs.readFileSync('dist/_redirects', 'utf8');
+if (coverUrls.some((url) => !home.includes(`src="${url}"`)) || !coverArticle.includes('property="og:image"') || !redirects.includes('/wp-content/uploads/2019/10/0_E6ucXqEIUfT12iuW.jpg /images/covers/compile-install-python-centos.jpg 301')) {
+  console.error('Post cover images missing');
   process.exit(1);
 }
 

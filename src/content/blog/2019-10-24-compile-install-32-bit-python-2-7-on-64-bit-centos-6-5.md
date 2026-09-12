@@ -7,6 +7,8 @@ month: "10"
 day: "24"
 routeSlug: "compile-install-32-bit-python-2-7-on-64-bit-centos-6-5"
 categories: ["Tech","centos","devops","python"]
+cover: "/images/covers/compile-install-python-centos.jpg"
+coverAlt: "Compile and install Python on CentOS"
 ---
 <p>You might want to compile a version of Python other than shipped one on your CentOS system. For example, running a Python script using a library that only has a 32bit build. Here are the steps on how to compile &amp; install Python 2.7.12 from source code on CentOS 6.5. All operations tested on a clean CentOS 6.5 (AWS AMI: <em>CentOS 6.5 x86_64(HVM) — 20141008–0 — minimal install with cloud helpers plus Intel SRIOV (ami-4dc28f7d)</em>)</p>
 

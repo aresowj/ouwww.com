@@ -7,6 +7,8 @@ month: "05"
 day: "21"
 routeSlug: "reflection-for-my-last-semester-at-omscs"
 categories: ["Thoughts","computer science","georgia tech","master degree","omscs"]
+cover: "/images/covers/how-to-draw-an-owl.jpg"
+coverAlt: "How to draw an owl"
 ---
 <h1>Introduction</h1>
 <p>Spring 2021 was my last semester in the master program at Georgia Tech. I chose to push my limit and elected two courses:</p>
