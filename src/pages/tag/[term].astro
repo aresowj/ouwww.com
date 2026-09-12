@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import PostCard from '../../components/PostCard.astro';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  const terms = [...new Set(posts.flatMap((post) => post.data.categories.slice(1).map((tag) => tag.toLowerCase().replaceAll(' ', '-'))))];
+  return terms.map((term) => ({
+    params: { term },
+    props: { term, posts: posts.filter((post) => post.data.categories.slice(1).some((tag) => tag.toLowerCase().replaceAll(' ', '-') === term)) },
+  }));
+}
+
+const { term, posts } = Astro.props;
+---
+
+<Base title={`#${term} · weijie ou's scratch pad`}>
+  <h1>#{term}</h1>
+  <section class="post-list">
+    {posts.map((post) => <PostCard post={post} />)}
+  </section>
+</Base>

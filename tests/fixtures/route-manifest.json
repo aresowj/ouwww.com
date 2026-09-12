@@ -1,0 +1,13 @@
+{
+  "posts": [
+    "/2016/10/25/how-to-check-python-version-both-command-line-and-programmatically/",
+    "/2019/10/24/compile-install-32-bit-python-2-7-on-64-bit-centos-6-5/",
+    "/2019/10/25/javascript-jquery-angularjs-notes/",
+    "/2019/10/25/summary-and-thinking-on-bulb-switcher-problem/",
+    "/2021/05/21/reflection-for-my-last-semester-at-omscs/",
+    "/2022/01/11/first-3-months-at-discord-as-a-software-engineer/",
+    "/2022/01/20/debugging-403-forbidden-error-accessing-files-on-apache-2/"
+  ],
+  "categories": ["/category/life/", "/category/tech/", "/category/thoughts/"],
+  "tags": ["algorithm", "apache", "career", "centos", "computer-science", "devops", "discord", "georgia-tech", "hosting", "javascript", "leetcode", "master-degree", "omscs", "python", "software-engineering", "web"]
+}
