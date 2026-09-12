@@ -81,4 +81,4 @@ if (coverUrls.some((url) => !home.includes(`src="${url}"`)) || !coverArticle.inc
   process.exit(1);
 }
 
-console.log(`Verified ${urls.length} legacy post routes, ${taxonomyUrls.length} taxonomy routes, feeds, sitemap artifacts, 404, and SEO metadata.`);
+console.log(`Verified ${urls.length} post routes, ${taxonomyUrls.length} taxonomy routes, feeds, sitemap artifacts, 404, and SEO metadata.`);
